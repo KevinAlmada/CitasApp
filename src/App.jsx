@@ -2,6 +2,7 @@ import './assets/index.css'
 import React,{Fragment,useState,useEffect} from 'react';
 import Formulario from './components/Formulario';
 import Cita from './components/Cita';
+import Header from './components/Header';
 function App() {
 /* Array de citas */
 let citasIniciales = JSON.parse(localStorage.getItem('citas'))
@@ -32,6 +33,7 @@ const eliminarCita = id => {
 const titulo = citas.length === 0 ?"No hay citas" :"Administrador de citas"
   return (
     <Fragment>
+      <Header />
       <h1>Administrador de pacientes </h1>
     <div className="Container">
       <div className="row">
